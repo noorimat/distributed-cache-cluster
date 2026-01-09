@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.noorimat.cache.grpc";
+option java_outer_classname = "CacheProto";
+
+package cache;
+
+service CacheService {
+  rpc Get(GetRequest) returns (GetResponse);
+  rpc Put(PutRequest) returns (PutResponse);
+  rpc Delete(DeleteRequest) returns (DeleteResponse);
+  rpc GetStats(StatsRequest) returns (StatsResponse);
+}
+
+message GetRequest {
+  string key = 1;
+}
+
+message GetResponse {
+  bool found = 1;
+  bytes value = 2;
+}
+
+message PutRequest {
+  string key = 1;
+  bytes value = 2;
+  optional int64 ttl_seconds = 3;
+}
+
+message PutResponse {
+  bool success = 1;
+}
+
+message DeleteRequest {
+  string key = 1;
+}
+
+message DeleteResponse {
+  bool success = 1;
+}
+
+message StatsRequest {}
+
+message StatsResponse {
+  int64 total_keys = 1;
+  int64 hits = 2;
+  int64 misses = 3;
+  double hit_rate = 4;
+  int64 evictions = 5;
+}
