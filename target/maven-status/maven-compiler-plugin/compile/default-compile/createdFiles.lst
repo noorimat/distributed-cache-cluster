@@ -1,3 +1,4 @@
+com/noorimat/cache/benchmark/BaselineComparison.class
 com/noorimat/cache/hash/ConsistentHashRing.class
 com/noorimat/cache/grpc/CacheServiceGrpc$3.class
 com/noorimat/cache/grpc/PutRequest$Builder.class
@@ -16,6 +17,7 @@ com/noorimat/cache/grpc/GetResponseOrBuilder.class
 com/noorimat/cache/grpc/StatsResponse$Builder.class
 com/noorimat/cache/grpc/GetRequest$1.class
 com/noorimat/cache/grpc/DeleteResponse$Builder.class
+com/noorimat/cache/benchmark/CacheBenchmark.class
 com/noorimat/cache/client/CacheClient.class
 com/noorimat/cache/grpc/CacheProto.class
 com/noorimat/cache/grpc/StatsRequest.class
